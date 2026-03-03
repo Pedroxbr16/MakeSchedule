@@ -21,9 +21,3 @@ npm run dev
 
 Acesse `http://localhost:3000`.
 
-## Deploy na Vercel
-
-1. Suba o projeto para um repositorio Git.
-2. Importe o repositorio na Vercel.
-3. A Vercel detecta Next.js automaticamente.
-4. Clique em `Deploy`.
