@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
 
 type ScaleRow = {
@@ -226,13 +227,16 @@ export default function Home() {
     <main className="page">
       <section className="panel input-panel">
         <p className="eyebrow">Gerador de Escala</p>
-        <h1>Monta Escala</h1>
+        <h1 className="title-with-icon">
+          <Image src="/icon.svg" alt="" width={40} height={40} className="title-icon" />
+          <span>Monta Escala</span>
+        </h1>
         <p className="intro">
           Preencha os dados e veja a tabela de escala sendo atualizada na hora.
         </p>
 
         <div className="field">
-          <label htmlFor="titulo">Titulo</label>
+          <label htmlFor="titulo">Título</label>
           <input
             id="titulo"
             value={titulo}
@@ -258,12 +262,12 @@ export default function Home() {
             rows={4}
             value={obs}
             onChange={(event) => setObs(event.target.value)}
-            placeholder="Informacoes gerais para esta escala"
+            placeholder="Informações gerais para esta escala"
           />
         </div>
 
         <div className="people-head">
-          <h2>Pessoas e Funcoes</h2>
+          <h2>Pessoas e Funções</h2>
           <button type="button" onClick={addRow}>
             Adicionar linha
           </button>
@@ -278,11 +282,11 @@ export default function Home() {
                   id={`pessoa-${row.id}`}
                   value={row.pessoa}
                   onChange={(event) => updateRow(row.id, "pessoa", event.target.value)}
-                  placeholder="Nome da pessoa"
+                  placeholder="Nome da(s) pessoa(s)"
                 />
               </div>
               <div className="field">
-                <label htmlFor={`funcao-${row.id}`}>Funcao</label>
+                <label htmlFor={`funcao-${row.id}`}>Função</label>
                 <input
                   id={`funcao-${row.id}`}
                   value={row.funcao}
@@ -320,14 +324,14 @@ export default function Home() {
         <div>
           <h2>{titulo.trim() || "Sem titulo"}</h2>
           <p className="meta">Data: {formatDate(data)}</p>
-          <p className="notes">{obs.trim() || "Sem observacoes gerais."}</p>
+          <p className="notes">{obs.trim() || "Sem observações gerais."}</p>
 
           <div className="table-wrap">
             <table>
               <thead>
                 <tr>
                   <th>Pessoa(s)</th>
-                  <th>Funcao</th>
+                  <th>Função</th>
                 </tr>
               </thead>
               <tbody>

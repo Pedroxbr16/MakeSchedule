@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="70" y1="70" x2="442" y2="442" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D86D47"/>
+      <stop offset="1" stop-color="#E57955"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="512" height="512" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect x="48" y="48" width="416" height="416" rx="74" fill="url(#bg)" filter="url(#shadow)"/>
+
+  <!-- Calendar -->
+  <g>
+    <rect x="160" y="138" width="192" height="150" rx="26" fill="#FAF8F3"/>
+    <path d="M160 138C160 123.641 171.641 112 186 112H326C340.359 112 352 123.641 352 138V162H160V138Z" fill="#F2E3BE"/>
+    <rect x="194" y="94" width="14" height="42" rx="7" fill="#F7E8CC"/>
+    <rect x="304" y="94" width="14" height="42" rx="7" fill="#F7E8CC"/>
+    <circle cx="201" cy="138" r="11" fill="#D86D47"/>
+    <circle cx="311" cy="138" r="11" fill="#D86D47"/>
+
+    <!-- Check 1 -->
+    <path d="M188 201L202 215L226 189" stroke="#555B78" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="244" y="192" width="72" height="12" rx="6" fill="#D86D47"/>
+
+    <!-- Check 2 -->
+    <path d="M188 244L202 258L226 232" stroke="#555B78" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="244" y="235" width="72" height="12" rx="6" fill="#D86D47"/>
+  </g>
+
+  <!-- ME -->
+  <text x="256" y="392"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="116"
+        font-weight="800"
+        letter-spacing="-3"
+        fill="#FFFDF8">ME</text>
+</svg>
